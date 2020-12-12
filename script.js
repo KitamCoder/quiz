@@ -6,7 +6,7 @@ const nextButton = document.getElementById("next");
 let currentSlide = 0;
 
 const questions = [{
-        question: "Кто изобрёл JavaScipt?",
+        question: "Who created JavaScript?",
         answers: {
             a: "Douglas Crockford",
             b: "Sheryl Sandberg",
@@ -15,7 +15,7 @@ const questions = [{
         correctAnswer: "c"
     },
     {
-        question: "Что является пакетным менеджером?",
+        question: "What is a package manager?",
         answers: {
             a: "Node.js",
             b: "TypeScript",
@@ -24,7 +24,7 @@ const questions = [{
         correctAnswer: "c"
     },
     {
-        question: "Что является инструментом для проверки качества кода?",
+        question: "What is a code quality checker tool?",
         answers: {
             a: "Angular",
             b: "jQuery",
@@ -43,7 +43,7 @@ function buildQuiz() {
         (currentQuestion, questionNumber) => {
             const answers = [];
 
-            for (letter in currentQuestion.answers) {
+            for (const letter in currentQuestion.answers) {
                 answers.push(
                     `<label>
                         <input type="radio" name="question${questionNumber}" value="${letter}">
